@@ -8,6 +8,16 @@ Bu proje sayesinde Git, Node.js, pnpm, Vencord ve plugin dosyalarıyla tek tek u
 
 ---
 
+# Kullanım
+
+1. ZIP dosyasını indirin ve istediğiniz bir klasöre ayıklayın.
+2. Ayıklanan klasörde PowerShell açın.
+3. Aşağıdaki komutu çalıştırın:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File install.ps1
+```
+
 ## Özellikler
 
 ### 🖼️ Özel Arka Plan — `OzelArkaPlan`
