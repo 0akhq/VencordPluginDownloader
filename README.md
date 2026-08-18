@@ -223,7 +223,7 @@ gibi işlemlerle tek tek uğraşmak istemeyen kullanıcılar için hazırlanmı�
 
 **0akh**
 
-Software / Vencord Plugin Development
+Software Developer
 
 ---
 
