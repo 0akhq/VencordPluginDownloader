@@ -9,6 +9,7 @@ Bu proje sayesinde Git, Node.js, pnpm, Vencord ve plugin dosyalarıyla tek tek u
 ### **49251FE01354168F25846CCE334E2B5E4D99699FEE1794CAABFE316E175BF19D** 
 > Güncel SHA256 değeri budur. İndirdiğiniz dosyanın SHA değerinin eşleştiğini kontrol etmek için terminalde şu komutu çalıştırabilirsiniz:
 > `Get-FileHash ".\install.ps1" -Algorithm SHA256`
+> Eğer eşleşmiyorsa yanlış bir şey indirmiş olabilirsiniz, çalıştırmamanız önerilir.
 
 ---
 
