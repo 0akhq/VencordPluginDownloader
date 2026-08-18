@@ -1,8 +1,6 @@
 import { definePluginSettings } from "@api/Settings";
 import definePlugin, { OptionType } from "@utils/types";
 
-// ─── Ayarlar ──────────────────────────────────────────────────────────────────
-
 const settings = definePluginSettings({
     imageUrl: {
         type: OptionType.STRING,
@@ -115,14 +113,8 @@ const settings = definePluginSettings({
     }
 });
 
-// ─── CSS enjeksiyonu ──────────────────────────────────────────────────────────
-
 const STYLE_ID = "ozelarkaplan-style";
 
-/**
- * HEX rengi rgba() string'ine çevirir.
- * Geçersiz HEX gelirse siyah döner.
- */
 function hexToRgba(hex: string, alpha: number): string {
     const clean = hex.replace(/^#/, "");
     const full  = clean.length === 3
@@ -150,10 +142,6 @@ function applyCSS() {
 
     const overlayColor  = settings.store.overlayColor.trim() || "#000000";
 
-    // Katman sırası (background-image, üstten alta):
-    //   1. Vignette gradient (opsiyonel)
-    //   2. Renk overlay (opsiyonel)
-    //   3. Asıl resim
     const layers: string[] = [];
 
     if (gradient) {
@@ -168,8 +156,6 @@ function applyCSS() {
         layers.push(`linear-gradient(${hexToRgba(overlayColor, overlayOpacity)}, ${hexToRgba(overlayColor, overlayOpacity)})`);
     }
 
-    // URL'yi güvenli şekilde sar (çift tırnak kaçışı, boşluk kodlama yapılmaz —
-    // tarayıcı zaten halleder; sadece " karakteri escape edilir)
     const safeUrl = url.replace(/"/g, "%22");
     layers.push(`url("${safeUrl}")`);
 
@@ -226,8 +212,6 @@ function applyCSS() {
     el.textContent = css;
     document.head.appendChild(el);
 }
-
-// ─── Plugin tanımı ────────────────────────────────────────────────────────────
 
 export default definePlugin({
     name: "OzelArkaPlan",
