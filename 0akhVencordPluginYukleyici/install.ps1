@@ -140,7 +140,6 @@ function Select-Plugins ([string]$scriptDir) {
 
     $keys = @($raw -split '\s+')
 
-    # @() ile wrap: tek eslesme bile array olarak kalir
     $selected = @($available | Where-Object { $keys -contains $_.Key })
 
     if ($selected.Count -eq 0) { Abort "Gecersiz secim. Lutfen listeden numara gir." }
@@ -150,7 +149,7 @@ function Select-Plugins ([string]$scriptDir) {
 Clear-Host
 Write-Host ""
 Write-Host "  ============================================" -ForegroundColor Cyan
-Write-Host "   0akh baba plugin yükleyici"                    -ForegroundColor Cyan
+Write-Host "   0akh Plugin Yukleyici"                    -ForegroundColor Cyan
 Write-Host "  ============================================" -ForegroundColor Cyan
 Write-Host ""
 
